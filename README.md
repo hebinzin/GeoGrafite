@@ -1,4 +1,8 @@
-# Node.js Hello World
+# GeoGrafite
+
+[//]: # (This README.md file contains the original Vercel template content)
+
+[//]: # (TODO: replace it with the actual project content)
 
 Simple Node.js + Vercel example that returns a "Hello World" response.
 
