@@ -1,5 +1,5 @@
-const { VercelRequest, VercelResponse } = require('@vercel/node');
-
+const { IncomingMessage, ServerResponse } = require('http');
+//const { VercelRequest, VercelResponse } = require('@vercel/node');
 module.exports = (req, res) => {
   const { name = 'World' } = req.query;
   return res.json({
