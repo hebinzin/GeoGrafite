@@ -11,7 +11,8 @@ body {
     margin: 0;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
     width: 100vw;
 }
@@ -31,8 +32,8 @@ html, body {
     width: 100vw;
 }
 
-
-#login, #logout {
+#login,
+#logout {
     background-color: var(--color-accent);
     color: var(--color-light);
     border: none;
@@ -41,4 +42,10 @@ html, body {
     border-radius: 7px;
     cursor: pointer;
     float: right;
+}
+
+#profile {
+    display: inline-block;
+    margin: 7px;
+    padding: 7px;
 }

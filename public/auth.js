@@ -27,4 +27,26 @@ auth0.createAuth0Client({
         e.preventDefault();
         auth0Client.logout();
     });
+
+    const isAuthenticated = await auth0Client.isAuthenticated();
+    const userProfile = await auth0Client.getUser();
+
+    // Assumes an element with id "profile" in the DOM
+    const profileElement = document.getElementById("profile");
+
+    //TODO: hide login button if authenticated
+    if (isAuthenticated) {
+        loginButton.style.display = "none";
+        logoutButton.style.display = "block";
+        profileElement.style.display = "block";
+        profileElement.innerHTML = `
+            ${userProfile.name}
+            <!--img src="${userProfile.picture}" /-->
+          `;
+    } else {
+        /*profileElement.style.display = "none";*/
+        loginButton.style.display = "block";
+        logoutButton.style.display = "none";
+        profileElement.style.display = "none";
+    }
 });
