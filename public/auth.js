@@ -1,6 +1,6 @@
 auth0.createAuth0Client({
-    domain: process.env.AUTH0_DOMAIN,
-    clientId: process.env.AUTH0_CLIENT_ID,
+    domain: "geografite-testing.us.auth0.com",
+    clientId: "E4ljdqLoXH9Rp4cXmWrooK7wMnzOLdxE",
     authorizationParams: {
         redirect_uri: window.location.origin
     }
