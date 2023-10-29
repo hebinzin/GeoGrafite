@@ -19,4 +19,12 @@ auth0.createAuth0Client({
         await auth0Client.handleRedirectCallback();
         window.history.replaceState({}, document.title, "/");
     }
+
+    // Assumes a button with id "logout" in the DOM
+    const logoutButton = document.getElementById("logout");
+
+    logoutButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        auth0Client.logout();
+    });
 });
