@@ -38,7 +38,7 @@ auth0.createAuth0Client({
     if (isAuthenticated) {
         loginButton.style.display = "none";
         logoutButton.style.display = "block";
-        profileElement.style.display = "block";
+        profileElement.style.display = "inline-block";
         profileElement.innerHTML = `
             ${userProfile.name}
             <!--img src="${userProfile.picture}" /-->
