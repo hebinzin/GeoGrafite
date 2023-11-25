@@ -5,7 +5,7 @@ let tileProvider = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 
 let layerOptions = {
     minZoom: 4,
-    maxZoom: 16,
+    maxZoom: 20,
     zoomDelta: 0.5,
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
 }
