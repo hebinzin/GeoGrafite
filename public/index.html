@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="./style.css" />
 
     <title>GeoGrafite</title>
@@ -32,8 +35,25 @@
 
     <button id="fab">+</button>
 
+    <div id="overlay" style="display: none;">
+        <div id="new-artwork-form" style="display: none;">
+            <form>
+                <p>Insira informações da nova obra abaixo e clique em "Adicionar obra" quando estiver tudo pronto!</p>
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required><br><br>
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" required></textarea><br><br>
+                <label for="image">Carregar imagem:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+                <button type="submit">Adicionar obra</button>
+                <button type="button" id="close">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
     <script type="module" src="./map.js"></script>
-    <script src="./auth.js"></script>
+    <script type="module" src="./auth.js"></script>
+    <script type="module" src="./fab.js"></script>
 </body>
 
 </html>
